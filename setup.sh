@@ -162,9 +162,9 @@ wget --no-check-certificate -O /usr/bin/tuic https://raw.githubusercontent.com/E
 chmod +x /usr/local/tuic/tuic.sh
 chmod +x /usr/bin/tuic
 # Generate and print URLs
-IPV4_URL="tuic://$UUID:$PASSWORD@$IPV4:$PORT/?congestion_control=$CONGESTION_CONTROL&udp_relay_mode=native&alpn=h3%2Cspdy%2F3.1&allow_insecure=1"
+IPV4_URL="tuic://$UUID:$PASSWORD@$IPV4:$PORT/?congestion_control=$CONGESTION_CONTROL&udp_relay_mode=native&alpn=h3&sni=www.bing.com&allow_insecure=1"
 
-IPV6_URL="tuic://$UUID:$PASSWORD@[$IPV6]:$PORT/?congestion_control=$CONGESTION_CONTROL&udp_relay_mode=native&alpn=h3%2Cspdy%2F3.1&allow_insecure=1"
+IPV6_URL="tuic://$UUID:$PASSWORD@[$IPV6]:$PORT/?congestion_control=$CONGESTION_CONTROL&udp_relay_mode=native&alpn=h3&sni=www.bing.com&allow_insecure=1"
 
 echo "----------------config info-----------------"
 echo -e "\e[1;33mUUID: $UUID\e[0m"
